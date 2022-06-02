@@ -5,15 +5,22 @@ import { apiGet } from '../misc/config';
 const Home = () => {
   const [input, setInput] = useState('');
   const [results, setResults] = useState(null);
+  const [searchOptions, setSearchOptions] = useState('shows');
+
+  const isShowsSearch = searchOptions === 'shows';
 
   const onSearch = () => {
-    apiGet(`/search/shows?q=${input}`).then(res => {
+    apiGet(`/search/${searchOptions}?q=${input}`).then(res => {
       setResults(res);
     });
   };
 
   const onInputChange = ev => {
     setInput(ev.target.value);
+  };
+
+  const onRadioChange = ev => {
+    setSearchOptions(ev.target.value);
   };
 
   const onKeyDown = ev => {
@@ -28,13 +35,11 @@ const Home = () => {
     }
 
     if (results && results.length > 0) {
-      return (
-        <div>
-          {results.map(item => (
-            <div key={item.show.id}>{item.show.name}</div>
-          ))}
-        </div>
-      );
+      return results[0].show
+        ? results.map(item => <div key={item.show.id}>{item.show.name}</div>)
+        : results.map(item => (
+            <div key={item.person.id}>{item.person.name}</div>
+          ));
     }
     return null;
   };
@@ -43,10 +48,34 @@ const Home = () => {
     <MainPageLayout>
       <input
         type="text"
+        placeholder="Search For Something"
         onChange={onInputChange}
         onKeyDown={onKeyDown}
         value={input}
       />
+      <div>
+        <label htmlFor="shows-search">
+          Shows
+          <input
+            id="shows-search"
+            type="radio"
+            value="shows"
+            checked={isShowsSearch}
+            onChange={onRadioChange}
+          />
+        </label>
+
+        <label htmlFor="actors-search">
+          Actors
+          <input
+            id="actors-search"
+            type="radio"
+            value="people"
+            checked={!isShowsSearch}
+            onChange={onRadioChange}
+          />
+        </label>
+      </div>
       <button type="button" onClick={onSearch}>
         Search
       </button>
