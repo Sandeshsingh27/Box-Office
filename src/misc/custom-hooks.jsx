@@ -6,7 +6,7 @@ function showReducer(prevState, action) {
       return [...prevState, action.showId];
     }
     case 'REMOVE': {
-      return action.filter(showId => showId !== action.showId);
+      return prevState.filter(showId => showId !== action.showId);
     }
 
     default:
