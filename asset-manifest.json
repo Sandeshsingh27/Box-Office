@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Box-Office/static/css/main.5fffadb5.chunk.css",
-    "main.js": "/Box-Office/static/js/main.49b29a4c.chunk.js",
-    "main.js.map": "/Box-Office/static/js/main.49b29a4c.chunk.js.map",
+    "main.js": "/Box-Office/static/js/main.42c95118.chunk.js",
+    "main.js.map": "/Box-Office/static/js/main.42c95118.chunk.js.map",
     "runtime-main.js": "/Box-Office/static/js/runtime-main.657ae6a9.js",
     "runtime-main.js.map": "/Box-Office/static/js/runtime-main.657ae6a9.js.map",
-    "static/js/2.63e2152b.chunk.js": "/Box-Office/static/js/2.63e2152b.chunk.js",
-    "static/js/2.63e2152b.chunk.js.map": "/Box-Office/static/js/2.63e2152b.chunk.js.map",
+    "static/js/2.45f14e93.chunk.js": "/Box-Office/static/js/2.45f14e93.chunk.js",
+    "static/js/2.45f14e93.chunk.js.map": "/Box-Office/static/js/2.45f14e93.chunk.js.map",
     "index.html": "/Box-Office/index.html",
     "service-worker.js": "/Box-Office/service-worker.js",
     "service-worker.js.LICENSE.txt": "/Box-Office/service-worker.js.LICENSE.txt",
     "service-worker.js.map": "/Box-Office/service-worker.js.map",
     "static/css/main.5fffadb5.chunk.css.map": "/Box-Office/static/css/main.5fffadb5.chunk.css.map",
-    "static/js/2.63e2152b.chunk.js.LICENSE.txt": "/Box-Office/static/js/2.63e2152b.chunk.js.LICENSE.txt"
+    "static/js/2.45f14e93.chunk.js.LICENSE.txt": "/Box-Office/static/js/2.45f14e93.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.657ae6a9.js",
-    "static/js/2.63e2152b.chunk.js",
+    "static/js/2.45f14e93.chunk.js",
     "static/css/main.5fffadb5.chunk.css",
-    "static/js/main.49b29a4c.chunk.js"
+    "static/js/main.42c95118.chunk.js"
   ]
 }
